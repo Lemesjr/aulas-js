@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex004</title>
     <style>
-        body{
+        body {
             font: normal 20pt Arial;
         }
     </style>
 </head>
+
 <body>
     <script>
-      var name = window.prompt('Qual seu nome?')  
-      document.write(`Olá ${name}! Seu nome tem ${name.trim().length} letras.<br/>`)
-      document.write(`Você sabia que em letras maiúsculas seu nome fica assim: ${name.toUpperCase()}.<br>`)
-      document.write(`E que em minúscula fica desta forma: ${name.toLowerCase()}`)
+        var name = window.prompt('Qual seu nome?')
+        document.write(
+            `Olá ${name}! Seu nome tem ${name.trim().length} letras.`, '</br>',
+            '</br>',
+            `Você sabia que em letras maiúsculas seu nome fica assim: ${name.toUpperCase()}.`, '<br>',
+            '<br>',
+            `E que em minúscula fica desta forma: ${name.toLowerCase()}`,'<br>'
+        )
+
+        /*
+        Este aqui é um exemplo que o professor passou em sala de aula sobre pré-incremento
+  
+        var num=(window.prompt('Digite um número: '))
+        document.write(
+          ++num,
+          '<br>',
+          num
+          );
+  
+          */
     </script>
 </body>
+
 </html>
