@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo_Programador_Master</title>
+    <style>
+input{
+    margin: 20px 10px;
+}
+input#teste-gerson{
+    margin: 25px 10px;
+}
+    </style>
+</head>
+
+<body>
+    <!--o "p" indica que é um parágrafo-->
+    <p>
+        Digite um número:
+    </p>
+
+    <input type="number" id="number-input">
+    <br>
+
+    <!-- <p>
+        Digite seu nome: (Lemes)
+    </p> 
+
+    <input type="text" id="name-test">
+    <br> -->
+
+    <button id="start-button">
+        <!-- Texto que vai dentro do botão -->
+        Processar
+    </button>
+    <br>
+    <br>
+
+    <!-- <button id="start-button-2">
+        Lemes Teste
+    </button> -->
+
+    <p id="result"></p>
+
+    <script>
+        // Pega a referência dos elementos e salva em variáveis
+        var inputRef = document.getElementById('number-input');
+        var buttonRef = document.getElementById('start-button');
+        var resultRef = document.getElementById('result');
+
+        // Declara função
+        // Podemos pensar na função como se fosse uma variável que tem um código dentro
+        function updateResult() {
+            resultRef.textContent = 'Seu número é: ' + inputRef.value;
+        }
+
+        // Atualiza o valor quando clica no botão
+        buttonRef.onclick = updateResult;
+
+        // Atualiza assim que o valor muda
+        // inputRef.oninput = updateResult;
+    </script>
+</body>
+
+</html>
