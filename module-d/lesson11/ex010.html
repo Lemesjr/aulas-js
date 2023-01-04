@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>
+        Sitema de Multas
+    </h1>
+
+    Velocidade do carro: <input type="number" name="speed" id="speed"> km/h
+
+    <input type="button" value="Verificar" onclick="calcular()">
+
+    <div id="resultForSpeed">
+
+    </div>
+
+    <script>
+        function calcular() {
+            var speedRef = document.getElementById('speed');
+            var resultForSpeed = document.getElementById('resultForSpeed');
+            var speed = Number(speedRef.value);
+
+            resultForSpeed.innerHTML = `<p>Sua velocidade atual é de <strong>${speed} km/h</strong>.</p>`;
+
+            if (speed >= 60) {
+
+                // Perceba que aqui abaixo eu utilizei o operador de concatenação para printar o próximo valor de "resulForSpeed", pois se apenas utilizasse o "=" o algoritmo iria sobreescrever o valor anterior.
+
+                resultForSpeed.innerHTML += `<p> Você está acima da velocidade permitida.</p>`;
+                resultForSpeed.innerHTML += `<p><strong>Multado ! ! !</strong></p>`;
+            }
+
+            resultForSpeed.innerHTML += `<p>Use sinto de segurança!</p>`;
+            resultForSpeed.innerHTML += `<p>Dirija com cuidado.</p>`;
+        }
+    </script>
+</body>
+
+</html>
