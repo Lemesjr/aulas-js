@@ -1,5 +1,6 @@
 var now = new Date();
 var dayWeek = now.getDay();
+var checkDayWeek = null
 
 /*
     O JS trás os dias da semana em números, representados a seguir:
@@ -13,29 +14,36 @@ var dayWeek = now.getDay();
 
 switch (dayWeek) {
     case 0:
-        dayWeek = 'Domingo'
+        checkDayWeek = 'Domingo'
         break
     case 1:
-        dayWeek = 'Segunda-Feira'
+        checkDayWeek = 'Segunda-Feira'
         break
     case 2:
-        dayWeek = 'Terça-Feira'
+        checkDayWeek = 'Terça-Feira'
         break
     case 3:
-        dayWeek = 'Quarta-Feira'
+        checkDayWeek = 'Quarta-Feira'
         break
     case 4:
-        dayWeek = 'Quinta-Feira'
+        checkDayWeek = 'Quinta-Feira'
         break
     case 5:
-        dayWeek = 'Sexta-Feira'
+        checkDayWeek = 'Sexta-Feira'
         break
     case 6:
-        dayWeek = 'Sexta-Feira'
+        checkDayWeek = 'Sábado'
         break
     default:
+        // Error Handling
         console.log('[ERRO]: o dia da semana é inválido.')
         break
 }
 
-console.log(`Hoje é ${dayWeek}.`)
+if (dayWeek < 7) {
+    console.log(`Hoje é ${checkDayWeek}.`)
+}
+
+
+
+
